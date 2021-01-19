@@ -1,0 +1,53 @@
+button {
+    display: block;
+    min-width: 25%;
+    padding: 1rem 2rem;
+    font-family: inherit;
+    font-weight: 400;
+    margin: 2rem auto;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.list-div {
+    max-width: 50%;
+    padding: 2rem;
+    color: white;
+    background-color: #5E457A;
+    font-size: 1.5rem;
+    font-family: inherit;
+    margin: 1rem auto;
+    border-radius: .5rem;
+}
+
+.list-div h3 {
+    text-align: center;
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.lists {
+    list-style: none;
+}
+
+.list-item {
+    display: flex;
+}
+
+.list-item span {
+    display: inline-block;
+}
+
+.list-item span:first-of-type {
+    flex: 0 0 40%;
+}
+
+.list-item span:nth-of-type(2) {
+    flex: 0 0 15%;
+}
+
+.list-item span:last-of-type {
+    flex: 0 0 45%;
+}

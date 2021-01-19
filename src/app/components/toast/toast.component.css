@@ -1,0 +1,30 @@
+.toast {
+    background-color: #38CC46;
+    color: black;
+    min-width: 60rem;
+    max-width: 50%;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    position: fixed;
+    top: 5%;
+    left: 30%;
+}
+
+p {
+    flex: 1;
+}
+
+.toast div {
+    cursor: pointer;
+    font-size: 2rem;
+    transition: all .2s;
+}
+
+.toast div:hover {
+    transform: scale(1.1);
+}

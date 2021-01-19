@@ -1,0 +1,36 @@
+<div class="card">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h2 class="card-heading">Credit Card Payment</h2>
+        <div class="grid-container">
+            <div>
+                <input [class.input-error]="errorObject.creditCardNumber" type="text" placeholder="Credit Card Number"
+                    formControlName="creditCardNumber" (blur)="validateOnBlur('creditCardNumber')">
+                <span class="error" *ngIf="errorObject.creditCardNumber"> {{ errorObject.creditCardNumber }} </span>
+            </div>
+            <div>
+                <input [class.input-error]="errorObject.cardHolder" type="text" placeholder="Card Holder"
+                    formControlName="cardHolder" (blur)="validateOnBlur('cardHolder')">
+                <span class="error" *ngIf="errorObject.cardHolder"> {{ errorObject.cardHolder }} </span>
+            </div>
+            <div>
+                <input type="date" [class.input-error]="errorObject.expirationDate" placeholder="Expiration Date"
+                    formControlName="expirationDate" (blur)="validateOnBlur('expirationDate')">
+                <span class="error" *ngIf="errorObject.expirationDate"> {{ errorObject.expirationDate }} </span>
+            </div>
+            <div>
+                <input type="text" [class.input-error]="errorObject.securityCode" placeholder="Security Code"
+                    formControlName="securityCode" maxlength="3" (blur)="validateOnBlur('securityCode')">
+                <span class="error" *ngIf="errorObject.securityCode"> {{ errorObject.securityCode }} </span>
+            </div>
+            <div>
+                <input type="text" [class.input-error]="errorObject.amount" placeholder="Amount"
+                    formControlName="amount" (blur)="validateOnBlur('amount')">
+                <span class="error" *ngIf="errorObject.amount"> {{ errorObject.amount }} </span>
+            </div>
+
+        </div>
+        <button type="submit"> Pay </button>
+    </form>
+</div>
+
+<app-toast [message]="message" (event)="closeToast($event)" *ngIf="showToast"></app-toast>

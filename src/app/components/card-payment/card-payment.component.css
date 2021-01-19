@@ -1,0 +1,82 @@
+.card {
+    max-width: 500px;
+    padding: 2rem;
+    background-image: linear-gradient(to left , #3E2563, #482563);
+    border-radius: 1.5rem;
+    margin: 3.5rem auto;
+}
+
+.card-heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin-top: 2rem;
+}
+
+input {
+    background-color: #5E457A;
+    color: white;
+    padding: 1.5rem 2rem;
+    display: inline-block;
+    border: none;
+    font-weight: 300;
+    font-family: inherit;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+}
+
+.card div:first-of-type {
+    grid-column: 1 / -1;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 2px 1px #ccc;
+}
+
+input::-webkit-input-placeholder {
+    color: white;
+    font-weight: 100;
+}
+button {
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 1.8rem;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    width: 40%;
+    text-align: center;
+    border-radius: 1000px;
+    border: none;
+    cursor: pointer;
+    transition: all .2s;
+    display: block
+}
+
+button:focus {
+    outline: none;
+    transform: translateY(2px);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.error {
+    color: red;
+    display: inline-block;
+    padding: .1rem 2rem;
+    font-size: 1.3rem;
+}
+
+.input-error {
+    border: 1px solid red;
+}

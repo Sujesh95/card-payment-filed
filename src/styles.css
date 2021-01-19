@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    height: 100vh;
+    background-color: #2B2B2B;
+}
